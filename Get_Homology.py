@@ -78,7 +78,7 @@ def delete_code():
     number2 = num_row_list.count(5)
     number3 = number1 + number2
     hold = number3/row                              #计算gap占整列数据的比例
-    if hold > 0.4:                                       #如果该比例大于50%
+    if hold > 0.1:                                       #如果该比例大于50%
       need_delete_list.append(i)                         #则将该列的索引号加入到列表need_delete_list中
   global matrix_new
   matrix_new = np.delete(matrix,need_delete_list,axis=1)      #在矩阵中将这些索引号所对应的列删掉，并将新的矩阵赋值给一个新的变量matrix_new
