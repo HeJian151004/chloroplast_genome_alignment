@@ -43,7 +43,7 @@ def build_dict():
       result_file.write(code[:-1])
       result_file.close()
       read_file = open(now_dir + "/" + species_name + ".fasta","r")
-      if species_name == "Eschscholzia_californica":
+      if species_name == species_list[1]:
         mrbayes_file = open(now_dir + "/" +  "result.txt","a")
         read_file.readline()
         code_long = read_file.readline()
