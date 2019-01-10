@@ -6,18 +6,18 @@
 
 ## 使用前准备
 
-1. 脚本需运行于windows平台
+1. 脚本需运行于Windows平台
 
-2. 脚本需要python3环境
+2. 脚本需要Python3环境
 https://www.python.org/downloads/
 
-3. 脚本需要安装numpy模块
+3. 脚本需要安装Nnumpy模块
 http://www.numpy.org/
 
 4. 亦可直接安装Anaconda使用，若安装此软件，前两个步骤可省略。
 https://www.anaconda.com/
 
-5. 脚本需要Geneious软件配合，作者使用geneious版本为Geneious R11，其他版本Geneious并未进行测试。
+5. 脚本需要Geneious软件配合，作者使用Geneious版本为Geneious R11，其他版本Geneious并未进行测试。
 https://www.geneious.com/
 
 
