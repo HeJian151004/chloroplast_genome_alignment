@@ -138,6 +138,7 @@ for fasta_name in file_name:
   get_temp_matrix()           #调用函数get_temp_matrix()
   delete_code()               #调用函数delete_code()
   write_file()                #调用函数write_file()
+  os.remove(fasta_name)
 
 
 
