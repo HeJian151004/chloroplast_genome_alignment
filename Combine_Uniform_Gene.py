@@ -26,3 +26,4 @@ for each in file_name:      #遍历file_name中的每一个字符串
 for fasta_name in file_name2:     #遍历列表file_name2
     species_name = fasta_name.split(" ")        #将该文件名以空格键“ ”进行分割，分割可得到该种的种名
     build_gene()
+    os.remove(fasta_name)
