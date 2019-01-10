@@ -91,4 +91,5 @@ for each_species in species_list:         #建立分物种的文件，并将第�
 
 for fasta_name in file_name2:
     build_dict()
+    os.remove(fasta_name)
 
