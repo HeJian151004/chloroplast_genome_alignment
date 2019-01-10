@@ -12,12 +12,7 @@ def get_file_list():
   for each in file_temp:        #将后缀为.fasta的文件加入列表file_name中
       if ".fasta" in each:
           file_name.append(each)
-
-
-
-
-
-
+          
 def del_gene():
     with open (now_dir + "/" + fasta_name[:-2], "a") as write_file:
         with open (now_dir + "/" + fasta_name, "r") as read_file:
@@ -30,23 +25,7 @@ def del_gene():
                     if judge == 1:
                         write_file.write(each_line)
                         write_file.write(read_file.readline())
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                          
-
+                                          
 
 def build_gene():       #将物种文件中的基因分别提取出来，形成新的基因文件，后缀为".fas"
     now_list = []
@@ -62,13 +41,7 @@ def build_gene():       #将物种文件中的基因分别提取出来，形成�
           next_line = fasta_file.readline()
           result_file.write(next_line)
           result_file.close()
-
         
-
-          
-          
-
-
 
 
 get_file_list()             #得到当前目录中所有的文件名并存入相关列表中
@@ -79,21 +52,12 @@ for fasta_name in file_name:
     os.rename(fasta_name[:-2],fasta_name)
     build_gene()
     species_list.append(fasta_name[:-6])
-
-
-
-
-
-
+    os.remove(fasta_name)
 
 
 
 
 #------------------------------文件已经建立完毕，之后开始检测相关基因缺失情况-------------------------------------------
-
-
-
-
 
 
 
