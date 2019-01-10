@@ -3,7 +3,6 @@
 
 该脚本为作者自用脚本，尚未进行任何的兼容性测试，出现任何bug请联系作者解决。
 
-The project includes a series of scripts that work with geneious software to alignment sequence of coding regions when the chloroplast genome gene structure has changed.
 
 ## 使用前准备
 
@@ -49,3 +48,8 @@ https://www.geneious.com/
 12. 运行Connect_Gene.py 该脚本将每个基因文件中的序列按照物种名称提取出来，形成各自物种文件。脚本还会形成一个名为result.txt的文件，该文件中的内容可作为partitionfinder软件https://github.com/brettc/partitionfinder/releases/tag/v2.1.1的输入文件使用。
 
 13. 运行Merge_Fasta.py 该脚本可将多个fasta文件合并为一个fasta文件。该文件即是最后的排序完成的文件
+
+
+## 联系方式
+何健 
+J.he930724@gmail.com
