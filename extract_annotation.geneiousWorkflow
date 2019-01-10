@@ -1,0 +1,62 @@
+<geneiousWorkflows>
+  <XMLSerialisableRootElement name="extract" author="Administrator" geneiousVersion="11.1.4" uniqueId="036167fd-dec8-4443-a152-833b0cbc1a8a" revisionNumber="3" description="">
+    <workflowElement type="com.biomatters.plugins.workflows.WorkflowElementForEach" />
+    <workflowElement id="com.biomatters.plugins.extractAnnotations.ExtractAnnotationsOperation" exposeNoOptions="true" exposeAllOptions="false" suppressErrors="false" showButtonForExposedGroup="false" groupNameForExposedOptions="" type="com.biomatters.plugins.workflows.DocumentOperationWorkflowElement">
+      <Options>
+        <option name="match">any</option>
+        <option name="whatToExtract">entireSequence</option>
+        <option name="intersecting">includeContained</option>
+        <option name="concatenate">false</option>
+        <option name="includeIntergenicRegionsOption">false</option>
+        <option name="dontMatchTruncated">false</option>
+        <childOption name="extractionContextOptions">
+          <option name="includeUpstreamBasesOption">false</option>
+          <option name="numUpstreamBasesOption">0</option>
+          <option name="includeDownstreamBasesOption">false</option>
+          <option name="numDownstreamBasesOption">0</option>
+        </childOption>
+        <childOption name="consensusOptions">
+          <option name="thresholdPercent">weighted_60</option>
+          <option name="customComponent1" />
+          <option name="noConsensusGaps">false</option>
+          <option name="mapQuality">true</option>
+          <option name="mapQualityMethod">mapSummed</option>
+          <option name="noCoverageCharacterDeNovo">unknown</option>
+          <option name="noCoverageCharacterReference">unknown</option>
+          <option name="applyLowCoverageOrQualityCall">false</option>
+          <option name="lowCoverageOrQualityCharacter">unknown</option>
+          <option name="coverageOrQuality">coverage</option>
+          <option name="qualityThreshold">20</option>
+          <option name="coverageThreshold">2</option>
+          <option name="noConsensusEndGaps">false</option>
+          <option name="trimToReference">false</option>
+          <option name="ignoreReadsMappedToMultipleLocations">false</option>
+          <option name="removeGaps">true</option>
+          <option name="appendText">false</option>
+          <option name="textToAppend">consensus sequence</option>
+          <option name="callWhenGapInBestStates" />
+          <option name="howToStoreSequences">AskUser</option>
+        </childOption>
+        <multiOption name="annotation">
+          <value>
+            <option name="field">Annotation type</option>
+            <option name="condition">is</option>
+            <option name="value" extra="">CDS</option>
+          </value>
+          <value>
+            <option name="field">Annotation type</option>
+            <option name="condition">is</option>
+            <option name="value" extra="">rRNA</option>
+          </value>
+          <value>
+            <option name="field">Annotation type</option>
+            <option name="condition">is</option>
+            <option name="value" extra="">tRNA</option>
+          </value>
+        </multiOption>
+      </Options>
+      <optionToExpose optionName="match" label="" />
+    </workflowElement>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE7UlEQVR42tVXfWxTVRQ/7T7Z+HA6dUGMyxKBTcBMUYjDaHQmAn4kLCRmBKJiBv+g/jUi/mETlJho1MDW9vWDt3YZ29oMA8o0JGNDWVwCyQiZCoqCxHXAlo6PktmM9njOfe+177Wvbt3QxJP8cnvfu72/3z333HPPA/g/G9rAip/BHAE33I92WIISPIZOWEntUmyGMmqLEMEyOyKagMhyMQD5uBcKEpBgAZE9LOCCl6jfSPBT/1vq7ybUogce4rEzJ5ahkCYtFSQSrKL2ecKLhHXU30gk76nopX6YgCom6ZkDHfAseaYke/IA5KAX5qmrW6uu7mtCP2FARR+9OyEgwTgGqhA7lyD21GsiQoQG2ooHsyffC/OJvIrwBhEcpYmu6Vanx3iC/OYfiLdGEMfPIrrzlfdO+ETERBPcQ968C/1QLLYyU1wIt/MgDiIJ3iKcJsTFZMEViK0LEdsrFLhzFRKNXMP4T4iuHE3gYRKwgxZRR7/XCzFuWJQxOEVw2aGC/rBZJVcm+q4B8cJBxFAf4jkZcfBjxC9Xp5NPjCEeWpPcAiU2fiFcJfxMAlwiYM2CU0S6A+5TA+wQYUJMdOoDRIwj3p7AhA3tI48sI8KrmcgjIkYkGEnZsjjNL5MXnuZTZBTAbnHCo9R+qCpG/GYdYnQcDcYeCC43kvOYw8/oiS4nyL1zEH/rVLyY9MxrvFijAA4UJ2ygAUNioK9UcbvexgZ15JcUYo38rFfx1v55SSFMfmVA+a8xOLeTgAeMAhxQrh63YTHozOdoapORJDm3TM5eYeNt6NmUTq4J+EcPOGAZKWtW9w8x/CNmNI6HVHLNWLi3KBP5KEEyjwEHPEnKgvQiJgZP3sIpLZWc+/vnKuRa0BrJj6mrL08/BQ6ooZdHEvvHkZ+NTU3eJ3ILZ1fONal5YFYCODjNyD0FmoDjBK9IRGbksxJw44JCzq0WH0zeWpa1gOxjQC9CkP+VJB9qosRUowkYFvcC1wxUR5jfA25YIVRO5xRkMs4PTM7xEI8h9r5O5BZNxD7iqMxc3fAxlMA+ZR6YTjxo9v12/cVkJw8/Yn4Dchp2wVPUdhgyYeRPnLlRDB3dkPSAE/bwFpjd//lcNNCALWrBMSr+wIF17dzM+TljdizWx8BWKnIWpgtQ7v9VhCYD+cTozMmj1xH739bIwyL7SbCGq6x0AVSzkftfoQEX7wj5pW5yfV3yQnLCD6J+ZC9LkJcugItOTo9a2RU6bj7xcI9SB/DpEEc0ngT3+TkHLi9AIY8SToqtVYraIvMTkOqBlrvTPcB9fm5eF5rhMpF+RfNuEmefC9yM57/53rnozluNTusXiRjQizCSj6p5IpZCGFOfD6un6CNRWXF5xzGWidxms1lPBRoWhOTHl0Y98+vpzNKFYUmKGD6WQm7pR5elF50W+viwHNGBMqjVTqQ7aY469ORVR+TiMpTLC5E4aBnmVbAsy4Xa7/MHNj53vbXyndvekhNxd+6YYYVu61jcWzQQ9ZbaInJFfbilcn3YV7VWw5hvee2VlpU1F3211ad9WxZP+xugu7u7oKura5HWP9Ox7dWRAy803mx/oi0ml4TinsIb3EbaqttC7S/vOhlo3HxHPzB5C/ReYBvofL9uKLjj3fPBrbt/73rz01+7tu0ZDO7c9a995bKI/+qL2u/3FwcCgRyt/zf9nG8uPmZQPwAAAABJRU5ErkJggg==</icon>
+  </XMLSerialisableRootElement>
+</geneiousWorkflows>
